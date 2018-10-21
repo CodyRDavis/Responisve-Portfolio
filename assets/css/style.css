@@ -11,7 +11,7 @@ body{
   color:#777;
 }
 nav, .content, .foot-container {
-  width: 960px;
+  max-width: 960px;
   margin: auto;
 }
 h1,h2,h3{
@@ -47,6 +47,7 @@ nav{
 .logo {
   padding: 16px 32px;
   background: #4AAAA5;
+  text-align: center;
 }
 .logo h1{
   color: #FFF;
@@ -159,7 +160,7 @@ input:hover, textarea:hover{
 
 }
 .portfolio-item{
-  margin: 8px;
+  margin: 0 8px;
 }
 .portfolio-content img{
   height:250px;
@@ -178,4 +179,41 @@ input:hover, textarea:hover{
   color: white;
   font-size: 1.5em;
   font-weight: normal;
+}
+
+
+
+/* MEDIA QUERY ###################################################### */
+@media screen and (max-width: 768px) {
+  nav, .content, .foot-container {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  nav, .content, .foot-container {
+    max-width: 640px;
+    margin: auto;
+  }
+  nav{
+    display: block;
+  }
+  .logo {
+    width: 100%;
+    display:block;
+    padding: 16px 32px;
+    background: #4AAAA5;
+  }
+  .nav-menu {
+    display :flex;
+    height: inherit;
+    justify-content: center;
+  }
+  .profile-picture{
+    float: none;
+    margin-bottom: 12px;
+    display:block;
+    width: 100%;
+    height: auto;
+  }
 }
